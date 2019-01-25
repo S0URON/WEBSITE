@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	
+  <!-- Basic Page Needs
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta charset="utf-8">
+  <title>SimpleMathQuiz</title>
+  <meta name="description" content="">
+  <meta name="author" content="">
+  
+	<script src="../lib/libraries/p5.js"></script>
+	<script src="../lib/libraries/p5.dom.js"></script>
+	<!--<script src="libraries/p5.sound.js"></script>-->
+	<!--<script src="sketch.js"></script>-->
+
+  <!-- Mobile Specific Metas
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- FONT
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link href="//fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css">
+
+  <!-- CSS
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="stylesheet" href="../css/normalize.css">
+  <link rel="stylesheet" href="../css/skeleton.css">
+
+  <!-- Favicon
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="icon" type="image/png" href="../images/favicon.png">
+  <button onclick="myFunction()" style="position:static;">Reload page</button>
+	<script>
+		function myFunction() {
+			location.reload();
+		}
+		</script>
+	 <form>
+<input type="button" style =" position :static; " value="return home" onclick="window.location.href='../index.html'" />
+</form>
+
+</head>
+<body>
+
+  <!-- Primary Page Layout
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <div class="container">
+    <div class="row">
+	  <div class="one-half column" style="margin-top: 5%">
+        <h1 id="question">question ?</h1>
+        <button id ="but0">not the answer</button>
+        <button id ="but1">answer</button>
+        <button id ="but2">also not the answer</button>
+        <button id ="but3">defenetly not the answer</button>
+
+    <br>
+        <button id ="RC">next</button>
+        <p id = "tafcha"> score =</p>
+        <h3 id="score"></h3>
+
+      </div>
+    </div>
+  </div>
+  <script src="variables.js"></script>
+  <script src="funct.js"></script>
+	<script src="sketch.js"></script>
+<!-- End Document
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+</body>
+</html>

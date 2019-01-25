@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <title>ThisIsNotPaint</title>
+  <head>
+    <meta name="viewport" width=device-width, initial-scale=2.0, maximum-scale=2.0, user-scalable=0>
+    <style> body {padding: 0; margin: 0;} </style>
+	<link rel="icon" type="image/png" href="../images/favicon2.png">
+    <script src="../lib/libraries/p5.js"></script>
+    <script src="../lib/libraries/p5.dom.js"></script>
+    <script src="sketch.js"></script>
+	<!--<script type="text/javascript" src="cordova.js"></script>-->
+
+    <!--style="background-image:url(azerty.jpg);<script src="../addons/p5.sound.min.js"></script>-->
+    <link rel="stylesheet" type="text/css" href="index.css">
+	 <form>
+<input type="button" class="button" style ="width :150px" value="return home" onclick="window.location.href='../index.html'" />
+</form>
+  </head>
+  <body background="background.jpg">
+    <div id="tfachholder">
+    </br>
+      <h3 style="cursor:default;font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;color: white">Thickness :</h3>
+      <input type="number" title="thickness"  min="1" value="45" style="width: 150px;cursor:pointer"id="t">
+    </br>
+    </br>
+      <h3 style="cursor:default;font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;color: white">Color :</h3>
+    <input type="color" title="color" id="clr" class"color" style="cursor:pointer;width:150px;">
+    </br>
+    </br>
+    </br>
+      <button id="e" class="button">reset</button>
+      
+      <button id="cave"class="button">save</button>
+      </br>
+      </br>
+      <button id="rubber" class="button">rubber</button>
+      <button id="brush" class="button">brush</button>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,48 @@
+h2 {
+	font-family: Helvetica;
+	font-size: 50px;
+	color: #000;
+	text-align: center;
+	margin: auto;
+	-webkit-text-fill-color: silver;
+	-webkit-text-stroke-width:2px;
+	text-shadow: 3px 3px 3px gray;
+	cursor: default;
+}
+a {
+	text-decoration: none;
+}
+p  {
+    font-family:comic sans MS;
+    text-align: center;
+    margin: auto;
+	font-size: 30px;
+	color: black;
+	-webkit-text-fill-color: transparent;
+	-webkit-text-stroke-width:2px;
+	text-decoration: none;
+	letter-spacing: 2px;
+	background-image: linear-gradient(to right , #f00, #ff0, #0ff, #0f0, #00f);	
+	animation: animate 20s linear infinite;
+	-webkit-background-clip: text;
+	background-size: 1000%;
+}
+@keyframes animate
+{
+	0%
+	{
+		background-position: 0% 100%;
+	}
+	50%
+	{
+		background-position: 100% 0%;
+	}
+	100%
+	{
+		background-position: 0% 100%;
+	}
+}
+body {
+	background-repeat: no-repeat;
+	background-size: cover;
+}

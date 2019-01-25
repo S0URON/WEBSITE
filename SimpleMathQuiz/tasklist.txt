@@ -1,0 +1,4 @@
+-add delay between questions after answering so the user can see the result.
+-dynamically change the content of the buttons with the questions.
+-will add stuff if i rememeber shit
+		
