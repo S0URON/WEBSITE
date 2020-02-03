@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name='viewport' content='width=device-width, initial-scale=0.5, maximum-scale=0.5, user-scalable=0' />
+    <title>catch the cube 3d</title>
+    <style>
+        body {
+            margin: 0;
+        }
+        
+        canvas {
+            display: block;
+        }
+        
+        #info {
+            position: absolute;
+            top: 10px;
+            width: 100%;
+            z-index: 100;
+            text-align: center;
+            display: inline-block;
+            color: aliceblue;
+        }
+    </style>
+    <script src="js/input.js"></script>
+
+</head>
+
+<body>
+    <script src="js/three.js"></script>
+    <div id="info">score :
+        <p id='score'></p>
+        <h1 id="go" hidden>GAMEOVER</h1>
+    </div>
+    <div style="position: absolute;top: 1%;z-index: 100;text-align: right;"><button id="reload" onclick="reload()">reload</button></div>
+    <div style="position: absolute;top: 1%;z-index: 100;color: aliceblue;margin-left: 10%;">high score :
+        <p id='highscore'></p>
+    </div>
+    <script>
+        var score = 0;
+        var position = 0;
+        // Our Javascript will go here.
+        var scene = new THREE.Scene();
+
+        if (isMobile == true) {
+            var camera = new THREE.PerspectiveCamera(75, 310 / 720, 0.1, 1000);
+        } else {
+            var camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+        }
+
+
+        var renderer = new THREE.WebGLRenderer();
+        renderer.setSize(window.innerWidth, window.innerHeight);
+        document.body.appendChild(renderer.domElement);
+        var geometry = new THREE.BoxGeometry();
+        var materialWhite = new THREE.MeshBasicMaterial({
+            color: 0xffffff
+        });
+        var materialRed = new THREE.MeshBasicMaterial({
+            color: 0xff0000
+        });
+        var cube = new THREE.Mesh(geometry, materialWhite);
+
+        var sp = new THREE.SphereGeometry(0.2);
+        var sphere = new THREE.Mesh(sp, materialRed);
+        scene.add(cube);
+        scene.add(sphere);
+
+        camera.position.z = 6;
+        camera.rotation.x = -0.3;
+
+        function animate() {
+            var id = requestAnimationFrame(animate);
+            sphere.position.y -= 0.02 + (score * 0.002);
+            cube.position.y = -6;
+
+            sphere.rotation.y += 0.1;
+            sphere.rotation.x -= 0.1;
+
+
+            move(cube, false, true);
+            collision(cube, sphere, checkPos(cube, sphere));
+            gameover(checkPos(cube, sphere), id);
+            document.getElementById('score').innerHTML = score;
+
+
+            renderer.render(scene, camera);
+        }
+        animate();
+    </script>
+
+</body>
+
+</html>
