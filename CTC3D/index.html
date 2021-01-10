@@ -50,7 +50,7 @@
         if (isMobile == true) {
             var camera = new THREE.PerspectiveCamera(75, 310 / 720, 0.1, 1000);
         } else {
-            var camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+            var camera = new THREE.PerspectiveCamera(75, 310 / 720/*window.innerWidth / window.innerHeight*/, 0.1, 1000);
         }
 
 
